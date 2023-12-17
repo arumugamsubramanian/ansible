@@ -122,9 +122,9 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
+quick-demo/env/
 venv/
-ENV/
+quick-demo/env/
 env.bak/
 venv.bak/
 
@@ -158,4 +158,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-env
+quick-demo/env
