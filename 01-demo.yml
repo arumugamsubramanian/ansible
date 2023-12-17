@@ -1,12 +1,12 @@
 ---
 - name: Shell Examples
   hosts: ubuntu_ssh_kind_vpc
+
   tasks:
+    - name: Check Date with Shell command
+      shell:
+         "date"
+      register: datecmd
+      tags: datecmd
 
-  - name: Check Date with Shell command
-    shell:
-       "date"
-    register: datecmd
-    tags: datecmd
-
-  - debug: msg="{{datecmd.stdout}}"
+    - debug: msg="{{datecmd.stdout}}"

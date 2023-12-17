@@ -23,9 +23,11 @@ cd /app
 * Run ansible-playbook
 ```shell
 # to check only group
-ansible ubuntu_ssh_kind_vpc -i dev_hosts -m ping -u root --ask-pass
+ansible ubuntu_ssh_kind_vpc -i dev_hosts.ini -m ping -u root --ask-pass
 #to check all the hosts in inventory file
-ansible all -i dev_hosts -m ping -u root --ask-pass
+ansible all -i dev_hosts.ini -m ping -u root --ask-pass
 # run playbook
-ansible-playbook -i dev_hosts 01-demo.yml -u root --ask-pass
+ansible-playbook -i dev_hosts.ini 01-demo.yml -u root --ask-pass
+# or add the password in inventory dev_hosts.ini
+ansible-playbook -i dev_hosts.ini 01-demo.yml
 ```
