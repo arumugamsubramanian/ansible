@@ -1,6 +1,6 @@
 ---
 - name: Shell Examples
-  hosts: ubuntu-ssh
+  hosts: ubuntu_ssh_kind_vpc
   tasks:
 
   - name: Check Date with Shell command
