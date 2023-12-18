@@ -13,7 +13,7 @@ docker run -d --network="kind" --name ubuntu-ssh -p 2222:22 arumugamsubramanian/
 * copy [env.example](env.example) to env
 * Enter all the information in env
 ```shell
-docker run -it --network="kind" --env-file env \
+docker run --rm -it --network="kind" --env-file env \
   -v $(pwd):/app \
   --name ansible_servicenow_ee_dev \
   arumugamsubramanian/ansible-servicenow-ee:latest bash
