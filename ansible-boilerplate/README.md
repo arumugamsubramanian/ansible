@@ -1,7 +1,7 @@
 ### Ansible Boilerplate to replicate into new project
 
 ```shell
-docker run --rm -it --network="kind" --env-file ../env \                                                          ─╯
+docker run --rm -it --network="kind" --env-file ../env \
   -v $(pwd):/app \
   --name ansible_servicenow_ee_dev \
   arumugamsubramanian/ansible-servicenow-ee:latest bash
