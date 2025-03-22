@@ -1,7 +1,9 @@
 ---
 - name: Shell Examples
-  hosts: ubuntu_ssh_kind_vpc
-
+  hosts: localhost
+  connection: local
+  collections:
+    - community.dns
   tasks:
     - name: Check Date with Shell command
       shell:
@@ -9,4 +11,10 @@
       register: datecmd
       tags: datecmd
 
-    - debug: msg="{{datecmd.stdout}}"
+    - name: Retrieve TXT values from all nameservers for two DNS names
+      community.dns.nameserver_record_info:
+        name:
+          - www.example.com
+          - example.org
+        type: TXT
+      register: result
